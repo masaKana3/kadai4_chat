@@ -71,9 +71,9 @@ button:hover {
   margin: 0 auto 20px;
   border-radius: 8px;
   padding: 10px;
-  overflow-y: auto;
+  /* overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: white grey;
+  scrollbar-color: white grey; */
 }
 
 #output::-webkit-scrollbar {

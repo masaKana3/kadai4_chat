@@ -5,27 +5,40 @@
 @media screen and (max-width: 480px) {
 
 }
+body {
+  background-color: #f7f7f7;
+}
+.box {
+  padding-top: 20px;
+}
 
 h1 {
   text-align: center;
   margin: 50px 0;
   font-size: 20px;
+  color: #6b705c;
 }
 
 input {
   width: 500px;
   padding: 10px;
   display: block;
-  margin: 0 auto 50px;
+  margin: 0 auto 20px;
 }
 
 textarea {
   width: 500px;
   height: 200px;
   padding: 10px;
-  margin: 0 auto 50px;
+  margin: 0 auto 20px;
   display: block;
   resize: none;
+}
+
+input, textarea {
+    background-color: #e8eae6; /* グレイッシュホワイト */
+    border: 1px solid #b7b7a4;
+    color: #6b705c;
 }
 
 button {
@@ -34,12 +47,20 @@ button {
   margin: 0 auto ;
   display: block;
   font-size: 16px;
+  background-color: #b7b7a4; /* グレイッシュグリーン */
+  color: white;
+  border: none;
+}
+button:hover {
+    background-color: #a5a58d; /* ワントーン濃い色 */
+    transform: scale(1.05); /* 少し大きくなる */
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .button-box {
     display: flex;
     width: 500px;
-    margin: 0 auto 50px;
+    margin: 0 auto 20px;
 }
 
 #output {
@@ -47,7 +68,24 @@ button {
   display: block;
   height: 500px;
   border: 1px solid #ccc;
-  margin: 0 auto 50px;
+  margin: 0 auto 20px;
   border-radius: 8px;
   padding: 10px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: white grey;
+}
+
+#output::-webkit-scrollbar {
+    width: 8px;
+}
+
+#output::-webkit-scrollbar-thumb {
+    background-color: #a5a58d;
+    border-radius: 4px;
+}
+
+
+#clear {
+  margin: 0 auto 20px;
 }

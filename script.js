@@ -7,6 +7,25 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase(app); //RealtimeDBに接続
 const dbRef = ref(db, "chat"); //RealtimeDB内の"chat"を使う
 
+$("#text").on("input", function () {
+  const keyword = $(this).val().toLowerCase().trim();
+  const $output = $("#output");
+  let imageUrl = "";
+
+  if (keyword.includes("クリスマス")) {
+    imageUrl = "./img/christmas.png"; 
+  } else if (keyword.includes("ハピバ")) {
+    imageUrl = "./img/hbd.png";
+  } else {
+    imageUrl = ""; // デフォルトで背景画像なし
+  }
+  $output.css({
+    "background-image": imageUrl ? `url(${imageUrl})` : "none",
+    "background-size": "cover",
+    "background-position": "center",
+  });
+});
+
 //send_1: そのまま保存
 $("#send_1").on("click", function() {
     const msg = {

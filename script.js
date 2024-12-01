@@ -2,6 +2,14 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
 import { getDatabase, ref, push, set, onChildAdded, onValue, remove, onChildRemoved }
     from "https://www.gstatic.com/firebasejs/9.1.0/firebase-database.js";
+const firebaseConfig = {
+    apiKey: "AIzaSyCEhINFiP4dt6zpw-IFWOgo9Mus8XuMEwM",
+    authDomain: "kadai4-chat-8be2e.firebaseapp.com",
+    projectId: "kadai4-chat-8be2e",
+    storageBucket: "kadai4-chat-8be2e.firebasestorage.app",
+    messagingSenderId: "189978149253",
+    appId: "1:189978149253:web:0017892ece45b7b416c4ec"
+};
 
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app); //RealtimeDBに接続
